@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Hacienda Guadalupe{% endblock %}</title>
+            <link rel="stylesheet" href="e4.estilos.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% block stylesheets %}
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{{ asset('css/e4.estilos.css') }}">
+    {% endblock %}
+    <!-- <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />-->
+</head>
+<body>
+    <div class="todo">
+        <div class="cuerpo">
+            <header>
+                <h1 class="hijo1">
+                    <a href="#">
+                        <img src="{{asset ('images/logo.png') }}" alt="images/logo.png">
+                    </a>
+                </h1>
+                <div class="hijo2">
+                    <nav>
+                        <ul>
+                           <li><a href="{{path ('inicio')}}">INICIO</a></li>
+                           <li><a href="{{path ('sobre_nosotros')}}">SOBRE NOSOTROS</a></li>
+                           <li><a href="{{path ('donde_estamos')}}">DÓNDE ESTAMOS</a></li>
+                           <li><a href="{{path ('contacto')}}">CONTACTO</a></li>
+                       </ul>
+                   </nav>
+               </div>
+           </header>
+           {% block body %}
+
+           {% endblock %}
+       </div>
+        <footer>
+            <div class="footer">
+                <img src="images/logo_footer.png">
+                <h3>© 2018 Hacienda Nuestra Señora de Guadalupe</h3>
+            </div>  
+        </footer>
+    </div>  
+{% block javascripts %}        
+    <script src="{{ asset ('js/jquery.min.js')}}"></script>
+    <script src="{{ asset ('js/popper.min.js')}}"></script>
+    <script src="{{ asset ('bootstrap/js/bootstrap.min.js')}}"></script>
+{% endblock %}
+</body>
+</html>
